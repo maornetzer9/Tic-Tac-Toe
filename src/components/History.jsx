@@ -2,9 +2,8 @@ import React from 'react'
 import Tilt from 'react-parallax-tilt';
 
 
-export const History = ({boardHistory = [] , handleHistoryIndex = () => {}}) => 
+export const History = ({boardHistory = [] , handleHistoryIndex = () => {}, restartGame = () => {} }) => 
 {
-  console.log(boardHistory);
   return (
      <div className="history-list">
           <Tilt>
@@ -19,6 +18,7 @@ export const History = ({boardHistory = [] , handleHistoryIndex = () => {}}) =>
                    </li>
                   )
               })}
+            <button className='history-record' onClick={restartGame}> Restart Game </button>
           </Tilt>
       </div>
   )

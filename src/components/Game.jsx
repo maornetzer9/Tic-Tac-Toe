@@ -28,7 +28,7 @@ const handleBoardHistory = (board) => {
     <div className='game-board'>
       
       <Board restartGame={restartGame} boardHistory={boardHistory} historyIndex={historyIndex} handleBoardHistory={handleBoardHistory} />
-      <History boardHistory={boardHistory} handleHistoryIndex={handleHistoryIndex}/>
+      <History boardHistory={boardHistory} handleHistoryIndex={handleHistoryIndex} restartGame={restartGame}/>
 
     </div>
   )

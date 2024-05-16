@@ -1,7 +1,7 @@
 import { Square } from './Square'
 import React, { useEffect, useState } from 'react'
-import { TicTacToeUtils } from './Tic_Tac_Toe_Utils';
 import Tilt from 'react-parallax-tilt';
+import { TicTacToeUtils } from './Tic_Tac_Toe_Utils';
 
 export const Board = ({ restartGame = () => {}, handleBoardHistory = () => {}, boardHistory = [], historyIndex = 0}) =>  
 {
@@ -14,6 +14,7 @@ export const Board = ({ restartGame = () => {}, handleBoardHistory = () => {}, b
     const newBoard = JSON.parse(JSON.stringify(boardHistory[historyIndex]));
 
     setBoard(newBoard);
+    // eslint-disable-next-line
   }, [historyIndex])
 
 
@@ -32,7 +33,7 @@ useEffect(() => {
     alert("Player \"O\" is the winner");
     restartGame()
   }
-
+// eslint-disable-next-line
 },[boardHistory])
 
 
